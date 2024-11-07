@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chhath Puja Of Bihar Form </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #6200ea;
+            color: white;
+        }
+        form {
+            width: 80%;
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="date"] {
+            padding: 10px;
+        }
+        button {
+            background-color: #6200ea;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent form submission to allow redirection
+            window.location.href = "index.html"; // Redirect to thank you page
+        }
+    </script>  
+         <script type="text/javascript"
+               src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+       </script>
+       <script type="text/javascript">
+          (function(){
+             emailjs.init({
+               publicKey: "sp0QDaEPRToG0dLTs",
+             });
+          })();
+       </script>
+       <script>
+        function SendMail() {
+          let params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+          };
+      
+          emailjs.send("service_ydpcekk", "template_vqnwvkg", params)
+            .then(function(response) {
+              alert("Email sent successfully!!");
+            }, function(error) {
+              alert("Failed to send email: " + error);
+            });
+        }
+      </script>
+        
+
+      
+</head>
+<body>
+    <h1>Whoever fills the form in whose house Chattha Puja is being done, he will be helped.</h1>
+    <form onsubmit="submitForm(event)"  action="https://api.web3forms.com/submit" method="POST">>
+        <input type="hidden" name="access_key" value="83de34f1-dcfe-4c18-a283-9a1a693ecf44">
+        <div>
+            <label>First Name</label>
+            <input type="text" placeholder="Enter the First Name" required>
+            <label>Last Name</label>
+            <input type="text" placeholder="Enter the Last Name" required>
+        </div>
+
+        <br>
+        <div>
+            <label>Email</label>
+            <input type="email" placeholder="Enter the Email" required>
+            <label>Password</label>
+            <input type="password" placeholder="Enter the Password" required>
+        </div>
+        <br>
+        <div>
+            <label for="state">Location</label>
+            <select id="state" name="state" required>
+                <option value="" disabled selected>Select your state</option>
+                <option value="andhra-pradesh">Andhra Pradesh</option>
+                <option value="bihar">Bihar</option>
+                <option value="goa">Goa</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="haryana">Haryana</option>
+                <option value="jharkhand">Jharkhand</option>
+                <option value="kerala">Kerala</option>
+                <option value="madhya-pradesh">Madhya Pradesh</option>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="uttar-pradesh">Uttar Pradesh</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>Enter the Date</label>
+            <input type="date" placeholder="Enter the Date" required>
+        </div>
+        <br>
+        <div>
+            <label>Address</label>
+            <input type="text" placeholder="Enter your address" required>
+        </div>
+        <br>
+        <button type="submit" onclick="SendMail()">Submit</button>
+    </form>
+   
+    <script src="App.js"></script>
+   
+</body>
+</html>

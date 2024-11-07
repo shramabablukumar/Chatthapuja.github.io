@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a webpage</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Screen Background Video</title>
+
+  <style>
+    /* Make sure the body and html elements cover the full height of the screen */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Video container styling */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Video element styling */
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Make the video cover the entire screen */
+      transform: translate(-50%, -50%);
+      z-index: -1; /* Place the video behind other content */
+    }
+
+    /* Optional content styling */
+    .content {
+      position: relative;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      z-index: 1; /* Place the content above the video */
+      
+    }
+    footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            /* padding: 4px; */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding-bottom: 20%;
+            /* padding-top: 1%; */
+
+    }
+
+        footer h3 {
+            margin: 2px 0;
+            font-size: 18px;
+            
+        }
+
+   .image-container .circular-image{
+    height: 60px;
+   
+
+   }
+
+    
+
+       
+
+
+    
+
+    
+  </style>
+  <script>
+    function submit(event) {
+        event.preventDefault(); // Prevent default behavior if it's inside a form
+        window.location.href = "index4.html"; // Redirect to the next page
+    }
+
+  </script>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="video.mp4" type="video/mp4">
+      
+    </video>
+    <div class="content">
+      <h1> Welcome to  Bihar </h1>
+      <p>Experience the immersive full-screen background video celebration of Chattha Puja!</p>
+    </div>
+    <div class="content">
+        <h1>Chattha Puja - A Celebration of Gratitude</h1>
+        <p>Chattha Puja is a revered Hindu festival celebrated primarily in the states of Bihar, Uttar Pradesh, Jharkhand, and Nepal, paying homage to the Sun God, Surya. It is a festival of deep devotion and gratitude for the Sun's vital role in sustaining life on Earth. The festival is celebrated six days after Diwali, typically falling in October or November. During this time, devotees express their heartfelt thanks to the Sun God for the blessings of health, prosperity, and happiness.</p>
+        <p>The celebration of Chattha Puja is marked by fasting and purification rituals. Devotees engage in a rigorous fast, dedicating themselves to Surya and his consort Usha, seeking their blessings. The main event of the puja occurs during sunrise and sunset on the sixth day of the festival, when devotees offer "arghya" or ritualistic water offerings to the Sun. Families gather near rivers, ponds, or any water body to perform the sacred rituals, creating an atmosphere of devotion and spiritual purity.</p>
+        
+       
+      </div>
+      <audio controls>
+        <source src="song.mp3" type="audio/mp3">
+        
+    </audio>
+    <audio id="myAudio">
+      <source src="song.mp3" type="audio/mp3">
+  </audio>
+
+ 
+      <footer>
+        <div class="image-container">
+            <img src="gan.jpeg" alt="to" class="circular-image">
+          </div>
+        <h3>This Website Dedicated to Chattha Puja </h3>
+        <h3>Create by Bablu kumar</h3>
+        <button onclick="submit(event)">Contact Page</button>
+      </footer>
+
+      
+   
+
+  </div>
+  <script src="App2.js"></script>
+  
+  
+  
+
+</body>
+</html>
+
+    
+    
+</body>
+</html>

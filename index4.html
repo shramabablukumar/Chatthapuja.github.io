@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a donate box and contact us </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .container h1 {
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .link {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .link:hover {
+            background-color: #f0f0f0;
+        }
+
+        .qr-code, .file-submit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeInUp 1.5s ease-in-out;
+           
+        }
+
+        .link-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 80%;
+          padding-inline-start: 40px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            /* padding: 10px 0; */
+            /* position: fixed; */
+            bottom: 100%;
+        }
+
+
+       
+.pujaImage {
+  width: 10%;
+  height: 60%;
+  object-fit: cover;
+  display: flex;
+  background-color: brown;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Lightning animation */
+  animation: lightning 2s infinite;
+  opacity: 0.8;
+}
+
+        h1{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 36px;
+    transition: transform ,color;
+  }
+       
+    </style>
+</head>
+<body>
+    <h1 id="heading" >WELCOME TO JBT GROUP </h1>
+    <img src="GRUP.jpg" alt="phot" class="pujaImage" >
+   
+       <!-- <div class="container1"> -->
+        
+        
+    <!-- </div> -->
+    <div class="container">
+        <h1 id="heading">Connect with Us</h1>
+        <div class="link-container">
+            <a href="https://www.linkedin.com/in/bablu-kumar12/" target="_blank" class="link linkedin">LinkedIn</a>
+            <a href="https://www.instagram.com/__bablu724/ " target="_blank" class="link instagram">Instagram</a>
+            <a href="https://shramabablukumar.github.io/freehost/" target="_blank" class="link facebook">Portfolio</a>
+            <a href="https://whatsapp.com/channel/0029VaepGkRKAwEciA4Aed2Z" target="_blank" class="link whatsapp">WhatsApp Group</a>
+            <a href="https://www.google.com" target="_blank" class="link google">Google</a>
+            <a href="sharma.bablu832002@gmail.com" target="_blank" class="link gmail">Gmail</a>
+            <a href="tel:+7209651967" class="link phone">Phone: +7209651967</a>
+            <a href="https://maps.app.goo.gl/47cs4VLaHiijDgny6" target="_blank" class="link gmail">View Location</a>
+
+        </div>
+
+        <div class="qr-code">
+            <h3>Donate via Phone Pay QR Code</h3>
+            <img src="phone.jpg" alt="Donation QR Code" width="200">
+        </div>
+
+        
+    </div>
+
+     <footer>
+        <!-- <div class="file-submit">
+            <h3>Submit a File</h3>
+            <form id="fileForm">
+                <input type="file" id="fileInput" required>
+                <button type="submit">Submit</button>
+                <p>&copy; 2024 JBT GROUP. All rights reserved.</p>
+        
+            </form>
+        </div> -->
+        <div class="file-submit">
+            <h3>Submit a File</h3>
+            <form action="mailto:sharma.bablu832002@gmail.com" method="post" enctype="multipart/form-data">
+                <input type="file" id="fileInput" name="fileInput" required>
+                <button type="submit">Submit</button>
+                <p>&copy; 2024 JBT GROUP. All rights reserved.</p>
+            </form>
+        </div>
+        
+
+    </footer> 
+    <script src="App.js"></script>
+</body>
+</html>
